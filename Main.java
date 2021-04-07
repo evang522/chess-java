@@ -1,19 +1,19 @@
-import chess.AbstractPiece;
 import chess.BoardPosition;
 import chess.Side;
 import chess.Vector;
-import chess.Piece.Pawn;
+import chess.Piece.Rook;
 
 public class Main {
 
     public static void main(String[] args) {
-        AbstractPiece pawn = new Pawn(new BoardPosition(0, 1), Side.WHITE);
+        Rook rook = new Rook(new BoardPosition(0, 0), Side.WHITE);
 
-        System.out.println(pawn);
+        System.out.println(rook);
 
-        pawn.moveBy(new Vector(0, 2));
-        pawn.moveBy(new Vector(0, 1));
+        rook.moveBy(new Vector(0, 2));
+        rook.moveBy(new Vector(2, 0));
+    
 
-        System.out.println(pawn);
+        System.out.println(rook);
     }
 }
